@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成人x网_成人影像创作社区_原创高清视频平台_幕光映像</title>
+<meta name="description" content="幕光映像——成人x网官方视频门户，专注原创高清成人影像内容的创作社区与品牌平台，汇聚优质创作者与专业内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0f14'/%3E%3Cpath d='M20 18l26 14-26 14z' fill='%23ff4d6d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --mx-bg:#0b0d12;
+  --mx-panel:#12161f;
+  --mx-panel2:#161b26;
+  --mx-line:rgba(255,255,255,.09);
+  --mx-ink:#eef1f6;
+  --mx-sub:#a4adbf;
+  --mx-dim:#7a8498;
+  --mx-acc:#ff4d6d;
+  --mx-acc2:#33e1a6;
+  --mx-acc3:#8b7bff;
+  --mx-wrap:1180px;
+  --mx-sticky:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--mx-sticky)}
+body{
+  margin:0;background:
+    radial-gradient(1200px 600px at 85% -10%,rgba(139,123,255,.16),transparent 60%),
+    radial-gradient(900px 500px at 0% 10%,rgba(255,77,109,.12),transparent 55%),
+    var(--mx-bg);
+  color:var(--mx-ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.mx-wrap{width:100%;max-width:var(--mx-wrap);margin:0 auto;padding:0 22px}
+.mx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- sticky bar ---------- */
+.mx-stickybar{position:sticky;top:0;z-index:90;backdrop-filter:blur(14px);background:rgba(9,11,16,.86);border-bottom:1px solid var(--mx-line)}
+.mx-notice{display:flex;gap:12px;align-items:center;font-size:12.5px;color:var(--mx-sub);padding:9px 0;overflow:hidden}
+.mx-notice__tag{flex:none;background:linear-gradient(120deg,var(--mx-acc),#ff8a5c);color:#fff;font-weight:700;font-size:11px;letter-spacing:.08em;padding:3px 9px;border-radius:999px}
+.mx-notice__track{display:flex;gap:38px;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.mx-notice__track::-webkit-scrollbar{display:none}
+.mx-notice__track span b{color:var(--mx-acc2);font-weight:600}
+.mx-head{display:flex;align-items:center;gap:18px;padding:12px 0 14px}
+.mx-logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;font-size:19px;flex:none}
+.mx-logo__mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,var(--mx-acc),var(--mx-acc3));display:grid;place-items:center;box-shadow:0 6px 22px rgba(255,77,109,.35)}
+.mx-logo__mark svg{width:16px;height:16px}
+.mx-logo small{display:block;font-size:10px;letter-spacing:.28em;color:var(--mx-dim);font-weight:500}
+.mx-nav{display:flex;gap:22px;font-size:14px;color:var(--mx-sub);margin-left:8px}
+.mx-nav a{position:relative;padding:4px 0;transition:color .2s}
+.mx-nav a:hover{color:#fff}
+.mx-nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--mx-acc);transition:width .25s}
+.mx-nav a:hover::after{width:100%}
+.mx-head__tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.mx-search{display:flex;align-items:center;gap:8px;background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:999px;padding:7px 12px;min-width:210px}
+.mx-search input{flex:1;min-width:0;border:0;background:none;color:var(--mx-ink);font-size:13px;outline:none}
+.mx-search input::placeholder{color:var(--mx-dim)}
+.mx-search button{font-size:13px;color:var(--mx-acc);font-weight:700}
+.mx-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:600;transition:transform .18s,box-shadow .2s,background .2s;white-space:nowrap}
+.mx-btn--primary{background:linear-gradient(120deg,var(--mx-acc),#ff7a52);color:#fff;box-shadow:0 8px 24px rgba(255,77,109,.3)}
+.mx-btn--ghost{border:1px solid var(--mx-line);color:var(--mx-ink);background:rgba(255,255,255,.03)}
+.mx-btn:hover{transform:translateY(-2px)}
+.mx-btn--primary:hover{box-shadow:0 12px 30px rgba(255,77,109,.42)}
+.mx-burger{display:none;width:40px;height:38px;border-radius:10px;border:1px solid var(--mx-line);background:var(--mx-panel);place-items:center}
+.mx-burger span{display:block;width:16px;height:2px;background:var(--mx-ink);margin:2.5px 0;border-radius:2px;transition:.25s}
+.mx-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.mx-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mx-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.mx-mobilenav{display:none;border-top:1px solid var(--mx-line);padding:8px 0 16px}
+.mx-mobilenav a{display:block;padding:10px 4px;font-size:14.5px;color:var(--mx-sub);border-bottom:1px dashed rgba(255,255,255,.06)}
+.mx-mobilenav.is-open{display:block}
+
+/* ---------- hero ---------- */
+.mx-hero{padding:52px 0 20px}
+.mx-hero__grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:40px;align-items:center}
+.mx-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;color:var(--mx-acc2);border:1px solid rgba(51,225,166,.3);background:rgba(51,225,166,.07);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.mx-hero h1{font-size:clamp(34px,5vw,58px);line-height:1.14;margin:0 0 16px;letter-spacing:-.015em;font-weight:800}
+.mx-hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--mx-acc),var(--mx-acc3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.mx-hero__lead{font-size:15.5px;color:var(--mx-sub);margin:0 0 18px;max-width:56ch}
+.mx-hero__intro{font-size:14px;color:var(--mx-dim);margin:0 0 24px;max-width:60ch}
+.mx-hero__intro b{color:var(--mx-ink);font-weight:600}
+.mx-hero__btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.mx-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid var(--mx-line);padding-top:20px}
+.mx-stats div{min-width:0}
+.mx-stats b{display:block;font-size:24px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.mx-stats b i{font-style:normal;font-size:13px;color:var(--mx-acc);margin-left:2px}
+.mx-stats span{font-size:12px;color:var(--mx-dim)}
+.mx-hero__visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--mx-line);box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.mx-hero__visual img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.mx-hero__badge{position:absolute;left:16px;bottom:16px;right:16px;display:flex;gap:10px;align-items:center;background:rgba(10,13,19,.72);border:1px solid var(--mx-line);backdrop-filter:blur(10px);border-radius:14px;padding:10px 14px;font-size:12.5px;color:var(--mx-sub)}
+.mx-hero__dot{width:8px;height:8px;border-radius:50%;background:var(--mx-acc2);box-shadow:0 0 0 4px rgba(51,225,166,.16);flex:none}
+
+/* ---------- section shell ---------- */
+.mx-sec{padding:60px 0}
+.mx-sec--alt{background:linear-gradient(180deg,rgba(255,255,255,.028),transparent 70%)}
+.mx-sectitle{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.mx-sectitle h2{font-size:clamp(22px,3vw,30px);margin:0;letter-spacing:-.01em;font-weight:800}
+.mx-sectitle p{margin:6px 0 0;color:var(--mx-dim);font-size:13.5px;max-width:60ch}
+.mx-sectitle .mx-kicker{font-size:11.5px;letter-spacing:.2em;color:var(--mx-acc);font-weight:700;display:block;margin-bottom:6px}
+
+/* ---------- keyword analysis ---------- */
+.mx-ana{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+.mx-ana__card{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:18px;padding:26px 26px 22px}
+.mx-ana__card h3{margin:0 0 10px;font-size:17px;color:#fff}
+.mx-ana__card h3 span{color:var(--mx-acc2);font-size:12px;letter-spacing:.14em;display:block;font-weight:600;margin-bottom:4px}
+.mx-ana__card p{margin:0 0 12px;font-size:14.2px;color:var(--mx-sub)}
+.mx-ana__card p:last-child{margin-bottom:0}
+.mx-ana__split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.mx-ana__split .mx-ana__card{height:100%}
+
+/* ---------- focus feature ---------- */
+.mx-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;align-items:stretch}
+.mx-feature{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.mx-feature img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.mx-feature__body{padding:20px 22px 22px}
+.mx-feature__body h3{margin:0 0 8px;font-size:20px;line-height:1.4}
+.mx-feature__body p{margin:0 0 14px;font-size:13.8px;color:var(--mx-sub)}
+.mx-tagrow{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.mx-tag{font-size:11.5px;color:var(--mx-sub);background:rgba(255,255,255,.06);border:1px solid var(--mx-line);padding:2px 9px;border-radius:999px}
+.mx-meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-size:12.5px;color:var(--mx-dim)}
+.mx-meta b{color:var(--mx-ink);font-weight:600}
+.mx-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.mx-act{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mx-sub);border:1px solid var(--mx-line);background:rgba(255,255,255,.03);padding:6px 12px;border-radius:999px;transition:.18s}
+.mx-act:hover{border-color:rgba(255,77,109,.5);color:#fff}
+.mx-act.is-on{color:#fff;border-color:rgba(255,77,109,.6);background:rgba(255,77,109,.16)}
+.mx-act .mx-heart{color:var(--mx-acc)}
+.mx-focus__list{display:flex;flex-direction:column;gap:14px}
+.mx-mini{display:grid;grid-template-columns:104px minmax(0,1fr);gap:14px;background:var(--mx-panel2);border:1px solid var(--mx-line);border-radius:14px;padding:12px;transition:.2s}
+.mx-mini:hover{border-color:rgba(139,123,255,.42);transform:translateX(3px)}
+.mx-mini img{width:104px;aspect-ratio:16/10;object-fit:cover;border-radius:9px}
+.mx-mini h4{margin:0 0 5px;font-size:14.5px;line-height:1.45}
+.mx-mini p{margin:0;font-size:12.3px;color:var(--mx-dim);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---------- video list ---------- */
+.mx-vlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--mx-line)}
+.mx-vitem{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:16px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--mx-line);transition:.2s}
+.mx-vitem:hover{background:rgba(255,255,255,.025)}
+.mx-vitem__idx{font-size:15px;font-weight:800;color:var(--mx-dim);letter-spacing:.04em}
+.mx-vitem__main h3{margin:0 0 5px;font-size:16px;line-height:1.5}
+.mx-vitem__main p{margin:0 0 8px;font-size:13.2px;color:var(--mx-dim)}
+.mx-vitem__main .mx-tagrow{margin-bottom:0}
+.mx-vitem__side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;font-size:12.3px;color:var(--mx-dim);min-width:120px}
+.mx-meter{width:100%;height:4px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
+.mx-meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--mx-acc),var(--mx-acc3))}
+
+/* ---------- topics ---------- */
+.mx-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mx-topic{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:18px;padding:20px;display:flex;flex-direction:column;transition:.22s}
+.mx-topic:hover{transform:translateY(-4px);border-color:rgba(255,77,109,.4);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.mx-topic__status{font-size:11.5px;font-weight:700;color:var(--mx-acc2);letter-spacing:.08em;margin-bottom:8px}
+.mx-topic__status.is-done{color:var(--mx-dim)}
+.mx-topic h3{margin:0 0 8px;font-size:17px;line-height:1.4}
+.mx-topic p{margin:0 0 14px;font-size:13.2px;color:var(--mx-sub)}
+.mx-topic ul{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:8px}
+.mx-topic li{font-size:12.8px;color:var(--mx-dim);padding-left:15px;position:relative}
+.mx-topic li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--mx-acc3)}
+.mx-topic__foot{margin-top:auto;font-size:12px;color:var(--mx-dim);border-top:1px dashed var(--mx-line);padding-top:12px;display:flex;justify-content:space-between;gap:10px}
+.mx-topic--wide{grid-column:span 2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px);gap:20px}
+.mx-topic--wide img{width:100%;height:100%;min-height:150px;aspect-ratio:auto;object-fit:cover;border-radius:12px}
+
+/* ---------- authors ---------- */
+.mx-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.mx-author{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:18px;padding:22px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;transition:.22s}
+.mx-author:hover{border-color:rgba(51,225,166,.4);background:var(--mx-panel2)}
+.mx-avatar{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:20px;color:#0b0d12;flex:none}
+.mx-author__body h3{margin:0 0 3px;font-size:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.mx-author__body h3 b{font-size:10px;font-weight:700;letter-spacing:.06em;color:#0b0d12;background:var(--mx-acc2);padding:1px 6px;border-radius:4px}
+.mx-author__body .mx-field{font-size:12px;color:var(--mx-acc);margin-bottom:8px}
+.mx-author__body p{margin:0 0 10px;font-size:13px;color:var(--mx-sub)}
+.mx-author__nums{display:flex;gap:16px;font-size:12px;color:var(--mx-dim);flex-wrap:wrap}
+.mx-author__nums b{color:var(--mx-ink);font-weight:700}
+.mx-author__more{margin-top:10px}
+
+/* ---------- reviews ---------- */
+.mx-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.mx-review{background:var(--mx-panel2);border:1px solid var(--mx-line);border-left:3px solid var(--mx-acc);border-radius:12px;padding:18px 20px}
+.mx-review p{margin:0 0 12px;font-size:13.6px;color:var(--mx-sub)}
+.mx-review__by{display:flex;align-items:center;gap:10px;font-size:12.3px;color:var(--mx-dim)}
+.mx-review__by .mx-avatar{width:30px;height:30px;font-size:13px}
+.mx-review__by b{color:var(--mx-ink);font-weight:600;font-size:12.8px}
+.mx-stars{color:var(--mx-acc);letter-spacing:2px;font-size:12px;margin-left:auto}
+
+/* ---------- dynamic / faq / partners ---------- */
+.mx-dynlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--mx-line)}
+.mx-dyn{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:16px 4px;border-bottom:1px solid var(--mx-line)}
+.mx-dyn time{font-size:12px;color:var(--mx-acc2);font-weight:600;letter-spacing:.04em}
+.mx-dyn h3{margin:0 0 4px;font-size:14.8px}
+.mx-dyn p{margin:0;font-size:12.8px;color:var(--mx-dim)}
+.mx-faq{display:flex;flex-direction:column;gap:10px}
+.mx-faq details{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:12px;padding:0 18px;transition:.2s}
+.mx-faq details[open]{border-color:rgba(255,77,109,.45);background:var(--mx-panel2)}
+.mx-faq summary{cursor:pointer;list-style:none;padding:15px 0;font-size:14.4px;font-weight:600;display:flex;gap:10px;align-items:center}
+.mx-faq summary::-webkit-details-marker{display:none}
+.mx-faq summary::before{content:"+";color:var(--mx-acc);font-weight:800;width:14px;flex:none}
+.mx-faq details[open] summary::before{content:"–"}
+.mx-faq p{margin:0 0 16px;font-size:13.2px;color:var(--mx-sub);padding-left:24px}
+.mx-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.mx-partner{background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:14px;padding:18px 14px;text-align:center;font-size:13.5px;font-weight:600;color:var(--mx-sub);transition:.2s}
+.mx-partner:hover{color:#fff;border-color:rgba(139,123,255,.45)}
+.mx-partner span{display:block;font-size:11px;color:var(--mx-dim);font-weight:400;margin-top:3px}
+.mx-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+
+/* ---------- search feedback ---------- */
+.mx-searchecho{margin-top:16px;display:none;font-size:13px;color:var(--mx-sub);background:rgba(51,225,166,.08);border:1px solid rgba(51,225,166,.24);padding:10px 14px;border-radius:10px}
+.mx-searchecho.is-on{display:block}
+
+/* ---------- CTA ---------- */
+.mx-cta{background:linear-gradient(120deg,rgba(255,77,109,.16),rgba(139,123,255,.14));border:1px solid var(--mx-line);border-radius:22px;padding:36px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.mx-cta h2{margin:0 0 8px;font-size:24px}
+.mx-cta p{margin:0;font-size:13.6px;color:var(--mx-sub);max-width:52ch}
+.mx-cta .mx-hero__btns{margin:0}
+
+/* ---------- footer ---------- */
+.mx-footer{border-top:1px solid var(--mx-line);background:rgba(7,9,13,.7);padding:52px 0 26px;margin-top:20px}
+.mx-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:32px}
+.mx-footer h4{margin:0 0 14px;font-size:13px;letter-spacing:.1em;color:var(--mx-dim);font-weight:700}
+.mx-footer p{margin:0 0 10px;font-size:12.8px;color:var(--mx-dim);max-width:34ch}
+.mx-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.mx-footer li a{font-size:12.8px;color:var(--mx-sub);transition:.2s}
+.mx-footer li a:hover{color:var(--mx-acc)}
+.mx-footer__bottom{border-top:1px solid var(--mx-line);padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.2px;color:var(--mx-dim)}
+
+/* ---------- modal & toast ---------- */
+.mx-modal{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:20px;background:rgba(4,6,9,.72);backdrop-filter:blur(6px)}
+.mx-modal.is-open{display:grid}
+.mx-modal__box{width:min(560px,100%);max-height:86vh;overflow:auto;background:var(--mx-panel);border:1px solid var(--mx-line);border-radius:18px;padding:26px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.mx-modal__box h3{margin:0 0 10px;font-size:18px}
+.mx-modal__box p{font-size:13.4px;color:var(--mx-sub)}
+.mx-modal__box label{display:block;font-size:12.5px;color:var(--mx-dim);margin:12px 0 5px}
+.mx-modal__box input,.mx-modal__box textarea{width:100%;background:var(--mx-bg);border:1px solid var(--mx-line);border-radius:9px;color:var(--mx-ink);padding:10px 12px;font-size:13.4px;font-family:inherit;outline:none}
+.mx-modal__box textarea{resize:vertical;min-height:90px}
+.mx-modal__box input:focus,.mx-modal__box textarea:focus{border-color:var(--mx-acc)}
+.mx-modal__foot{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+.mx-modal__close{position:absolute;top:14px;right:16px;font-size:20px;color:var(--mx-dim)}
+.mx-modal__box{position:relative}
+.mx-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#fff;color:#0b0d12;font-size:13.5px;font-weight:600;padding:11px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.28s;z-index:300;box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.mx-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.mx-top{position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;background:var(--mx-panel);border:1px solid var(--mx-line);display:grid;place-items:center;font-size:16px;color:var(--mx-sub);opacity:0;pointer-events:none;transition:.25s;z-index:120}
+.mx-top.is-on{opacity:1;pointer-events:auto}
+.mx-top:hover{color:#fff;border-color:var(--mx-acc)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .mx-nav{display:none}
+  .mx-burger{display:grid}
+  .mx-search{min-width:0;width:100%;max-width:260px}
+  .mx-hero__grid,.mx-focus,.mx-ana__split,.mx-cols,.mx-cta{grid-template-columns:minmax(0,1fr)}
+  .mx-topics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mx-topic--wide{grid-column:span 2;grid-template-columns:minmax(0,1fr)}
+  .mx-topic--wide img{aspect-ratio:16/7;min-height:0}
+  .mx-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mx-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mx-cta .mx-hero__btns{justify-content:flex-start}
+}
+@media (max-width:720px){
+  :root{--mx-sticky:104px}
+  .mx-head{flex-wrap:wrap;gap:10px}
+  .mx-head__tools{width:100%;margin-left:0;justify-content:space-between}
+  .mx-search{max-width:none}
+  .mx-hero{padding:34px 0 10px}
+  .mx-hero__visual img{aspect-ratio:16/12}
+  .mx-sec{padding:44px 0}
+  .mx-topics,.mx-authors,.mx-reviews,.mx-footer__grid{grid-template-columns:minmax(0,1fr)}
+  .mx-vitem{grid-template-columns:30px minmax(0,1fr);gap:12px}
+  .mx-vitem__side{grid-column:2;align-items:flex-start;min-width:0;flex-direction:row;justify-content:space-between;width:100%}
+  .mx-mini{grid-template-columns:84px minmax(0,1fr)}
+  .mx-mini img{width:84px}
+  .mx-dyn{grid-template-columns:minmax(0,1fr);gap:4px}
+  .mx-ana__card{padding:20px 18px}
+  .mx-cta{padding:26px 20px}
+  .mx-modal__box{padding:22px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ================= S1 吸顶：公告条 + 页头 ================= -->
+<div class="mx-stickybar" id="mxTop">
+  <div class="mx-wrap">
+    <div class="mx-notice" role="region" aria-label="官方公告">
+      <span class="mx-notice__tag">官方发布</span>
+      <div class="mx-notice__track">
+        <span><b>11月21日</b> 幕光映像官方App 3.6.0 上线：支持4K离线下载与创作者主页订阅提醒</span>
+        <span><b>11月18日</b> 「真实·共情」原创短片征集第二季开启报名，投稿入口已开放</span>
+        <span><b>11月15日</b> 创作者扶光计划第五期公布，新增12位签约原创作者</span>
+        <span><b>11月10日</b> 内容分级与青少年模式完成升级，社区公约同步更新</span>
+      </div>
+    </div>
+    <div class="mx-head">
+      <a class="mx-logo" href="#mxHero" aria-label="幕光映像官方网站首页">
+        <span class="mx-logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 2.6l9.2 5.4-9.2 5.4z" fill="#fff"/></svg>
+        </span>
+        <span>幕光映像
+          <small>MUGUANG STUDIO</small>
+        </span>
+      </a>
+      <nav class="mx-nav" aria-label="主导航">
+        <a href="#mxHero">首页</a>
+        <a href="#mxAna">关于我们</a>
+        <a href="#mxFocus">精品内容</a>
+        <a href="#mxTopics">专题企划</a>
+        <a href="#mxAuthors">创作者</a>
+        <a href="#mxReviews">口碑</a>
+        <a href="#mxFaq">帮助中心</a>
+      </nav>
+      <div class="mx-head__tools">
+        <div class="mx-search" role="search">
+          <span aria-hidden="true">🔍</span>
+          <label class="mx-sr" for="mxSearchInput">站内搜索</label>
+          <input id="mxSearchInput" type="search" placeholder="搜索作品 / 创作者 / 专题" autocomplete="off">
+          <button type="button" id="mxSearchBtn">搜索</button>
+        </div>
+        <button class="mx-btn mx-btn--primary" type="button" data-modal="mxModalSubmit">投稿入口</button>
+        <button class="mx-burger" type="button" id="mxBurger" aria-expanded="false" aria-controls="mxMobileNav" aria-label="展开导航">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mx-mobilenav" id="mxMobileNav">
+      <a href="#mxHero">首页</a>
+      <a href="#mxAna">关于我们</a>
+      <a href="#mxFocus">精品内容</a>
+      <a href="#mxTopics">专题企划</a>
+      <a href="#mxAuthors">创作者</a>
+      <a href="#mxReviews">口碑</a>
+      <a href="#mxFaq">帮助中心</a>
+      <a href="#mxDynamic">企业动态</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= S2 品牌首屏 ================= -->
+<header class="mx-hero" id="mxHero">
+  <div class="mx-wrap">
+    <div class="mx-hero__grid">
+      <div>
+        <span class="mx-eyebrow">品牌官方网站 · 成人影像创作社区</span>
+        <h1>成人x网 <em>幕光映像</em> 官方网站</h1>
+        <p class="mx-hero__lead">以原创为核心的高品质成人影像内容平台，为创作者与企业搭建持续运营的内容生态，让每一次真诚的表达都被看见。</p>
+        <p class="mx-hero__intro">幕光映像成立于 2016 年，深耕成人影像<strong>垂直领域</strong>，是行业内持续运营的<strong>企业</strong>级内容品牌。作为<strong>官方网站</strong>，我们坚持<strong>原创</strong>与<strong>正版</strong>，提供<strong>高清</strong>播放与规范分级体系，汇聚<strong>专业</strong>创作者与<strong>用户首选</strong>的<strong>精品内容</strong>。平台以<strong>用户至上</strong>为准则，用<strong>匠心</strong>打磨每一帧画面，构建多元、包容、值得信赖的内容<strong>社区</strong>，让真实与温暖成为长期<strong>陪伴</strong>的力量。</p>
+        <div class="mx-hero__btns">
+          <a class="mx-btn mx-btn--primary" href="#mxFocus">观看精品内容</a>
+          <a class="mx-btn mx-btn--ghost" href="#mxAuthors">认识创作者</a>
+          <a class="mx-btn mx-btn--ghost" href="#mxAna">了解品牌故事</a>
+        </div>
+        <div class="mx-stats">
+          <div><b>186<i>万+</i></b><span>注册社区用户</span></div>
+          <div><b>1240<i>部</i></b><span>在架原创作品</span></div>
+          <div><b>9.4<i>分</i></b><span>用户口碑评分</span></div>
+        </div>
+      </div>
+      <div class="mx-hero__visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 880'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23101622'/%3E%3Cstop offset='0.55' stop-color='%232a1830'/%3E%3Cstop offset='1' stop-color='%230d1220'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff4d6d'/%3E%3Cstop offset='1' stop-color='%238b7bff'/%3E%3C/linearGradient%3E%3CradialGradient id='g3' cx='0.5' cy='0.42' r='0.62'%3E%3Cstop offset='0' stop-color='%23ff8aa0' stop-opacity='0.9'/%3E%3Cstop offset='1' stop-color='%23ff8aa0' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='880' fill='url(%23g1)'/%3E%3Ccircle cx='400' cy='370' r='300' fill='url(%23g3)'/%3E%3Cg opacity='0.9'%3E%3Ccircle cx='400' cy='380' r='168' fill='none' stroke='url(%23g2)' stroke-width='2'/%3E%3Ccircle cx='400' cy='380' r='206' fill='none' stroke='%23ffffff' stroke-opacity='0.12' stroke-width='1'/%3E%3Ccircle cx='400' cy='380' r='118' fill='none' stroke='%2333e1a6' stroke-opacity='0.5' stroke-width='1'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M366 330l72 50-72 50z' fill='%23ffffff' fill-opacity='0.92'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.14'%3E%3Cpath d='M0 700h800M0 740h800M0 780h800'/%3E%3C/g%3E%3Cg fill='%23ff4d6d'%3E%3Crect x='80' y='640' width='46' height='6' rx='3'/%3E%3Crect x='80' y='660' width='86' height='6' rx='3' fill='%238b7bff'/%3E%3Crect x='80' y='680' width='62' height='6' rx='3' fill='%2333e1a6'/%3E%3C/g%3E%3Ctext x='80' y='120' fill='%23ffffff' fill-opacity='0.28' font-family='sans-serif' font-size='26' letter-spacing='10'%3EMUGUANG%3C/text%3E%3Ctext x='80' y='812' fill='%23ffffff' fill-opacity='0.5' font-family='sans-serif' font-size='20' letter-spacing='4'%3EORIGINAL · HD · COMMUNITY%3C/text%3E%3C/svg%3E" width="800" height="880" alt="幕光映像官方网站首屏主视觉：暗色环形光圈与播放符号构成的原创影像标识">
+        <div class="mx-hero__badge">
+          <span class="mx-hero__dot"></span>
+          官方主站持续运营中 · 每周更新原创精品内容
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= S? 关键词深度解析（品牌故事 / 深度解析 M15） ================= -->
+<section class="mx-sec" id="mxAna">
+  <div class="mx-wrap">
+    <div class="mx-sectitle">
+      <div>
+        <span class="mx-kicker">BRAND STORY</span>
+        <h2>关于成人x网的内容理解与品牌故事</h2>
+        <p>从一间小工作室到被用户信赖的官方网站，我们如何理解这个行业，如何组织内容，又如何守住底线。</p>
+      </div>
+    </div>
+
+    <div class="mx-ana">
+      <div class="mx-ana__split">
+        <div class="mx-ana__card">
+          <h3><span>01 / 行业观察</span>成人x网为什么需要一套专业的创作标准</h3>
+          <p>成人影像行业在过去十余年里经历了从粗放分发到内容规范化的转变。早期用户只能被动接受算法推送的作品，画面质量、叙事完整度与创作署名往往被忽略。幕光映像在 2016 年成立之初就判断，这个垂直领域真正稀缺的不是产量，而是<strong>品质</strong>与<strong>可被追溯的原创</strong>。我们把「成人x网」理解为一种内容形态，而不是噱头：它需要剧本、需要表演、需要灯光与后期，也需要清晰的分级与边界意识。</p>
+          <p>基于这一判断，平台建立了从选题评审、拍摄规范、成片分级到上线复核的四段式流程。每部作品必须提供创作说明、演员知情确认与内容分级标签，缺少任何一项都不能进入官方发布通道。这套流程在业内并不算轻，但它让创作者在长期运营中获得了稳定的口碑积累，也让用户在选择内容时少了许多不确定。</p>
+          <p>截至目前，平台在架原创作品 1240 部，覆盖叙事短片、人物访谈、生活纪实与艺术表达等多个方向。我们不追求单一维度的刺激，而是希望每一部作品都能在<strong>专业</strong>标准下被反复观看。</p>
+        </div>
+        <div class="mx-ana__card">
+          <h3><span>02 / 品牌理念</span>真实、共情与克制的表达边界</h3>
+          <p>我们把这套价值主张称为「真实·共情·克制」。真实，指内容必须来自可核实的创作过程，拒绝拼接与冒用；共情，指作品要尊重人物的情绪与意愿，而不是把关系简化为工具；克制，指平台在产品层面主动做减法——不做诱导性标题、不做夸大封面、不做越界推送。</p>
+          <p>内容分级是我们最重视的基础设施。平台按年龄与内容强度设置四级标签，并配套青少年模式与观看时长提醒。用户首次访问时会看到完整的社区公约，所有创作者在上传前必须阅读并勾选确认。近三年，平台共下架不符合规范的内容条目 217 条，全部来自创作者自查与社区举报的双重校验。</p>
+          <p>作为<strong>官方网站</strong>，我们愿意把这类数字公开在品牌故事里，因为<strong>值得信赖</strong>不是一句口号，而是可以被核查的运营记录。</p>
+        </div>
+      </div>
+
+      <div class="mx-ana__split">
+        <div class="mx-ana__card">
+          <h3><span>03 / 内容生态</span>创作者、用户与平台如何彼此成就</h3>
+          <p>平台的内容生态由三部分组成：创作者、用户与运营团队。创作者是内容源头，我们通过「扶光计划」为签约作者提供前期制作支持、设备共享与流量扶持，目前已签约 12 位原创作者，另有 300 余位创作者在社区持续更新。用户不只是观看者，他们的收藏、评论与举报共同构成内容质量的反馈回路。运营团队负责分级、复核与专题策划，把零散作品组织成有主题的观看路径。</p>
+          <p>我们特别重视「被看见」的公平性。新人作品在上线首周会进入「新人推荐位」，不参与热度排序，避免与大号直接竞争。每季度我们还会举办一次主题征集比赛，由用户投票与专业评审共同评选，获奖作品会获得官方首页展示位。这类机制让<strong>社区</strong>保持活力，也让<strong>内容生态</strong>不依赖少数头部账号。</p>
+          <p>作为一个持续运营的<strong>平台</strong>，我们相信长期主义：不追逐短期热点，不制造对立话题，把资源投入到剧本打磨、拍摄规范与创作者成长上。这是我们对<strong>用户首选</strong>这四个字最朴素的理解。</p>
+        </div>
+        <div class="mx-ana__card">
+          <h3><span>04 / 责任与未来</span>把社会责任写进产品结构里</h3>
+          <p>成人影像内容天然需要更严格的边界。我们把<strong>社会责任</strong>落在三个具体动作上：第一，建立年龄门与青少年模式，默认开启内容过滤；第二，设立 7×24 小时举报响应通道，48 小时内给出处理结果；第三，与第三方机构合作开展创作者合规培训，每年不少于 4 场。</p>
+          <p>面向未来，平台将重点投入两件事。一是<strong>高清</strong>与无障碍体验：4K 播放、字幕支持与移动端离线下载已陆续上线，下一步将完善画面描述与多语言字幕。二是内容多元：我们希望有更多女性创作者、更多中年视角、更多生活化的叙事进入这个垂直领域，让<strong>包容</strong>与<strong>多元</strong>不只停留在口号上。</p>
+          <p>如果你也在寻找一个尊重创作、尊重用户的成人x网官方网站，欢迎从浏览一篇品牌故事开始，再走进我们的精品内容与创作者名录。我们相信，真实的表达自带力量，而<strong>陪伴</strong>，是最长情的运营。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S3 焦点 + 视频条目 ================= -->
+<section class="mx-sec mx-sec--alt" id="mxFocus">
+  <div class="mx-wrap">
+    <div class="mx-sectitle">
+      <div>
+        <span class="mx-kicker">EDITOR'S PICK</span>
+        <h2>成人x网精品内容：本周官方焦点推荐</h2>
+        <p>由编辑部与用户投票共同选出的重点作品，包含一幅主推焦点与一组精选条目，其余以文字摘要呈现。</p>
+      </div>
+      <a class="mx-btn mx-btn--ghost" href="#mxTopics">查看全部专题</a>
+    </div>
+
+    <div class="mx-focus">
+      <article class="mx-feature">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 600'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23151a26'/%3E%3Cstop offset='1' stop-color='%23331b2c'/%3E%3C/linearGradient%3E%3ClinearGradient id='f2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff4d6d'/%3E%3Cstop offset='1' stop-color='%23ffb36b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='600' fill='url(%23f1)'/%3E%3Cg opacity='0.85'%3E%3Cpath d='M0 470 Q240 360 480 430 T960 380 V600 H0Z' fill='%23ff4d6d' fill-opacity='0.16'/%3E%3Cpath d='M0 520 Q260 420 520 480 T960 450 V600 H0Z' fill='%23ff4d6d' fill-opacity='0.1'/%3E%3C/g%3E%3Ccircle cx='700' cy='210' r='118' fill='none' stroke='url(%23f2)' stroke-width='2'/%3E%3Ccircle cx='700' cy='210' r='78' fill='%23ff4d6d' fill-opacity='0.18'/%3E%3Cpath d='M676 178l54 32-54 32z' fill='%23fff' fill-opacity='0.9'/%3E%3Cg fill='%23fff' fill-opacity='0.5'%3E%3Crect x='80' y='470' width='200' height='7' rx='3.5'/%3E%3Crect x='80' y='492' width='132' height='7' rx='3.5' fill-opacity='0.3'/%3E%3C/g%3E%3Ctext x='80' y='140' fill='%23fff' fill-opacity='0.26' font-family='sans-serif' font-size='90' font-weight='bold' letter-spacing='-2'%3E01%3C/text%3E%3C/svg%3E" width="960" height="600" alt="焦点作品《凌晨四点的剪辑室》封面：暗色画面中的光圈与播放按钮">
+        <div class="mx-feature__body">
+          <div class="mx-tagrow">
+            <span class="mx-tag">创作幕后</span><span class="mx-tag">人物访谈</span><span class="mx-tag">官方发布</span>
+          </div>
+          <h3>凌晨四点的剪辑室：一部原创短片如何从分镜走到成片</h3>
+          <p>编辑部用 28 分钟记录了一位创作者从剧本围读到调色的完整过程，谈到了拍摄现场的情绪管理、演员沟通与分级复核。这不是炫技式的幕后花絮，而是一份可复用的创作方法论。</p>
+          <div class="mx-meta">
+            <span>作者 <b>林知远</b></span><span>播放 <b>18.6万</b></span><span>点赞 <b>2.4万</b></span><span>收藏 <b>9871</b></span>
+          </div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="24086">24086</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+            <button class="mx-act" type="button" data-modal="mxModalReport">⚑ 反馈</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="mx-focus__list">
+        <article class="mx-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Cdefs%3E%3ClinearGradient id='m1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1a22'/%3E%3Cstop offset='1' stop-color='%23123a35'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='320' height='200' fill='url(%23m1)'/%3E%3Cg stroke='%2333e1a6' stroke-opacity='0.6' fill='none'%3E%3Ccircle cx='250' cy='60' r='40'/%3E%3Cpath d='M30 150l60-44 52 30 60-50 68 44'/%3E%3C/g%3E%3Crect x='30' y='40' width='60' height='6' rx='3' fill='%2333e1a6'/%3E%3C/svg%3E" width="320" height="200" alt="精选条目《镜头之外的距离感》封面：绿色线条构成的几何空间">
+          <div>
+            <h4>镜头之外的距离感：一次关于取景边界的对话</h4>
+            <p>摄影师谈如何用构图传达尊重，而不是制造窥探。</p>
+          </div>
+        </article>
+        <article class="mx-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Cdefs%3E%3ClinearGradient id='m2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23201830'/%3E%3Cstop offset='1' stop-color='%23101a2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='320' height='200' fill='url(%23m2)'/%3E%3Cg fill='%238b7bff' fill-opacity='0.75'%3E%3Crect x='34' y='128' width='18' height='42' rx='4'/%3E%3Crect x='62' y='100' width='18' height='70' rx='4' fill-opacity='0.55'/%3E%3Crect x='90' y='70' width='18' height='100' rx='4' fill-opacity='0.4'/%3E%3Crect x='118' y='46' width='18' height='124' rx='4' fill-opacity='0.28'/%3E%3C/g%3E%3Ccircle cx='250' cy='86' r='34' fill='none' stroke='%23ff4d6d' stroke-width='2'/%3E%3C/svg%3E" width="320" height="200" alt="精选条目《被看见的创作者》封面：紫色柱状图形与红色圆环">
+          <div>
+            <h4>被看见的创作者：新人首周推荐机制的一年回访</h4>
+            <p>我们回访了 12 位通过新人位起步的作者，聊了流量与心态。</p>
+          </div>
+        </article>
+        <article class="mx-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Cdefs%3E%3ClinearGradient id='m3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a1c15'/%3E%3Cstop offset='1' stop-color='%23141a1f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='320' height='200' fill='url(%23m3)'/%3E%3Cpath d='M0 160h320v40H0z' fill='%23ffb36b' fill-opacity='0.14'/%3E%3Cpath d='M40 60h240v90H40z' fill='none' stroke='%23ffb36b' stroke-opacity='0.55' stroke-width='1.5' stroke-dasharray='6 6'/%3E%3Crect x='40' y='60' width='120' height='16' fill='%23ffb36b' fill-opacity='0.3'/%3E%3C/svg%3E" width="320" height="200" alt="精选条目《分级不是标签游戏》封面：琥珀色虚线框与信息条">
+          <div>
+            <h4>分级不是标签游戏：内容分级体系的一次公开说明</h4>
+            <p>从标签定义到复核流程，把分级这件小事讲清楚。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="mx-searchecho" id="mxSearchEcho" role="status"></div>
+
+    <h3 style="margin:44px 0 4px;font-size:17px;color:#fff">成人x网热门视频流 · 本周更新摘要</h3>
+    <p style="margin:0 0 6px;font-size:13px;color:var(--mx-dim)">以下条目采用文字列表呈现，包含标题、摘要、标签、作者、数据与操作按钮。</p>
+    <div class="mx-vlist" id="mxVideoList">
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">01</span>
+        <div class="mx-vitem__main">
+          <h3>把台词念到第三十遍：一位演员的现场准备</h3>
+          <p>记录开拍前的两小时，从走位到情绪校准，呈现表演的真实温度。</p>
+          <div class="mx-tagrow"><span class="mx-tag">人物访谈</span><span class="mx-tag">创作幕后</span><span class="mx-tag">高清</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="9420">9420</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 沈聿 · 播放 9.8万</span>
+          <div class="mx-meter"><i style="width:72%"></i></div>
+          <span>完播率 72%</span>
+        </div>
+      </article>
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">02</span>
+        <div class="mx-vitem__main">
+          <h3>一间房间的两种光线：低成本布光实操</h3>
+          <p>用两盏灯与一块反光板完成夜景氛围，附参数表与踩坑记录。</p>
+          <div class="mx-tagrow"><span class="mx-tag">实用技巧</span><span class="mx-tag">教程干货</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="7136">7136</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 苏离 · 播放 7.2万</span>
+          <div class="mx-meter"><i style="width:64%"></i></div>
+          <span>完播率 64%</span>
+        </div>
+      </article>
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">03</span>
+        <div class="mx-vitem__main">
+          <h3>城市夜行影像：把街头当作一种叙事空间</h3>
+          <p>从取景许可到收音处理，谈城市外景拍摄的边界与取舍。</p>
+          <div class="mx-tagrow"><span class="mx-tag">城市探索</span><span class="mx-tag">深度测评</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="6284">6284</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 许恒 · 播放 6.4万</span>
+          <div class="mx-meter"><i style="width:58%"></i></div>
+          <span>完播率 58%</span>
+        </div>
+      </article>
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">04</span>
+        <div class="mx-vitem__main">
+          <h3>把情绪写进剪辑点：节拍与呼吸的对照实验</h3>
+          <p>同一段素材的三种剪法，对比观众停留时长与评论关键词。</p>
+          <div class="mx-tagrow"><span class="mx-tag">教程干货</span><span class="mx-tag">数据观察</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="5108">5108</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 林知远 · 播放 5.5万</span>
+          <div class="mx-meter"><i style="width:61%"></i></div>
+          <span>完播率 61%</span>
+        </div>
+      </article>
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">05</span>
+        <div class="mx-vitem__main">
+          <h3>同行评审：三组创作者互看成片会</h3>
+          <p>一场没有滤镜的互评，从叙事节奏到情绪表达，真话比夸奖更珍贵。</p>
+          <div class="mx-tagrow"><span class="mx-tag">社区活动</span><span class="mx-tag">人物访谈</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="4366">4366</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 编辑团队 · 播放 4.9万</span>
+          <div class="mx-meter"><i style="width:55%"></i></div>
+          <span>完播率 55%</span>
+        </div>
+      </article>
+      <article class="mx-vitem">
+        <span class="mx-vitem__idx">06</span>
+        <div class="mx-vitem__main">
+          <h3>半年之后：一位作者的更新频率与心态记录</h3>
+          <p>从日更到周更的取舍，聊创作节奏、收入结构与长期主义。</p>
+          <div class="mx-tagrow"><span class="mx-tag">日常记录</span><span class="mx-tag">经验分享</span></div>
+          <div class="mx-actions">
+            <button class="mx-act" type="button" data-like aria-pressed="false"><span class="mx-heart">♡</span> 点赞 <b data-count="3902">3902</b></button>
+            <button class="mx-act" type="button" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="mx-act" type="button" data-copy>⧉ 复制链接</button>
+          </div>
+        </div>
+        <div class="mx-vitem__side">
+          <span>作者 顾晚 · 播放 4.3万</span>
+          <div class="mx-meter"><i style="width:52%"></i></div>
+          <span>完播率 52%</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S4 专题企划 ================= -->
+<section class="mx-sec" id="mxTopics">
+  <div class="mx-wrap">
+    <div class="mx-sectitle">
+      <div>
+        <span class="mx-kicker">SERIES</span>
+        <h2>成人x网专题企划：把零散作品组织成观看路径</h2>
+        <p>每个专题包含主题简介、更新状态与三条内容条目，长期更新，欢迎收藏追更。</p>
+      </div>
+    </div>
+
+    <div class="mx-topics">
+      <article class="mx-topic mx-topic--wide">
+        <div>
+          <div class="mx-topic__status">连载中 · 已更新 8 期</div>
+          <h3>真实·共情：原创短片征集第二季</h3>
+          <p>面向所有注册创作者的主题征集，鼓励以真诚的生活观察为起点，拒绝猎奇与冒犯。官方提供选题辅导与成片分级支持，优秀作品进入官网首页焦点位。</p>
+          <ul>
+            <li>第 8 期《餐桌上的沉默》— 一次关于家庭关系的克制表达</li>
+            <li>第 7 期《雨停之前》— 手持镜头下的城市夜行记录</li>
+            <li>第 6 期《她的手》— 女性创作者视角的日常切片</li>
+          </ul>
+          <div class="mx-topic__foot"><span>报名截止：2026年12月20日</span><span>已投稿 214 部</span></div>
+        </div>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 300'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23111c26'/%3E%3Cstop offset='1' stop-color='%2324203a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='380' height='300' fill='url(%23t1)'/%3E%3Cg fill='none' stroke='%23ff4d6d' stroke-opacity='0.55'%3E%3Cpath d='M40 230c40-60 90-80 130-40s70 20 110-30'/%3E%3Cpath d='M40 250c40-60 90-80 130-40s70 20 110-30' stroke-opacity='0.3'/%3E%3C/g%3E%3Ccircle cx='300' cy='80' r='26' fill='%23ff4d6d' fill-opacity='0.2'/%3E%3Cg fill='%23fff' fill-opacity='0.5'%3E%3Crect x='40' y='48' width='90' height='6' rx='3'/%3E%3Crect x='40' y='66' width='56' height='6' rx='3' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E" width="380" height="300" alt="专题「真实·共情」第二季封面：暗色曲线与红色圆点构成的情绪轨迹">
+      </article>
+
+      <article class="mx-topic">
+        <div class="mx-topic__status">连载中 · 已更新 15 期</div>
+        <h3>镜头背后：创作者访谈时间线</h3>
+        <p>每月一期深度访谈，从入行契机聊到创作方法论，记录这个垂直领域里真实的人。</p>
+        <ul>
+          <li>第15期 沈聿：表演不是表演，是回应</li>
+          <li>第14期 苏离：低成本也能有电影感</li>
+          <li>第13期 顾晚：我为什么从日更改成周更</li>
+        </ul>
+        <div class="mx-topic__foot"><span>每月 15 日更新</span><span>累计播放 96万</span></div>
+      </article>
+
+      <article class="mx-topic">
+        <div class="mx-topic__status">已完结 · 共 6 期</div>
+        <h3>分级课堂：把规则讲给创作者听</h3>
+        <p>六期短视频科普内容分级与社区公约，上线后成为创作者上传前的必读材料。</p>
+        <ul>
+          <li>第六期 违规内容识别清单</li>
+          <li>第五期 演员知情确认该怎么写</li>
+          <li>第四期 封面与标题的边界</li>
+        </ul>
+        <div class="mx-topic__foot"><span>官方发布</span><span>累计学习 3.2万人次</span></div>
+      </article>
+
+      <article class="mx-topic">
+        <div class="mx-topic__status">策划中 · 敬请期待</div>
+        <h3>一城一室：地域影像计划</h3>
+        <p>以城市为线索，邀请本地创作者记录一间房间、一条街道与一段关系，呈现地域文化差异。</p>
+        <ul>
+          <li>拟邀 6 座城市的独立创作者参与</li>
+          <li>每城 1 部 15 分钟以内短片</li>
+          <li>成片统一进入官方专题页展示</li>
+        </ul>
+        <div class="mx-topic__foot"><span>预计 2027 年 Q1 上线</span><span>报名预约中</span></div>
+      </article>
+
+      <article class="mx-topic">
+        <div class="mx-topic__status">连载中 · 已更新 4 期</div>
+        <h3>技术手册：高清与收音实战</h3>
+        <p>面向进阶创作者的设备与流程专题，从编码格式到监听方案，逐条给出可执行建议。</p>
+        <ul>
+          <li>第四期 4K 素材的代理剪辑流程</li>
+          <li>第三期 室内同期声的三个要点</li>
+          <li>第二期 肤色还原与白平衡</li>
+        </ul>
+        <div class="mx-topic__foot"><span>双周更新</span><span>收藏 1.1万</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S5 创作者矩阵（双列简介） ================= -->
+<section class="mx-sec mx-sec--alt" id="mxAuthors">
+  <div class="mx-wrap">
+    <div class="mx-sectitle">
+      <div>
+        <span class="mx-kicker">CREATORS</span>
+        <h2>成人x网创作者矩阵：六位长期合作的原创作者</h2>
+        <p>他们风格不同、方向不同，但都在用专业与克制打磨作品。点击可查看完整档案。</p>
+      </div>
+    </div>
+    <div class="mx-authors">
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#ff4d6d,#ffb36b)">林</div>
+        <div class="mx-author__body">
+          <h3>林知远 <b>签约</b></h3>
+          <div class="mx-field">擅长领域：创作幕后 · 教程干货</div>
+          <p>影视后期出身，2018 年加入平台，擅长把复杂的制作流程拆成可复用的方法论。作品以稳健的节奏与扎实的技术细节见长，是新人创作者最常参考的作者之一。</p>
+          <div class="mx-author__nums"><span>作品 <b>86</b></span><span>粉丝 <b>23.4万</b></span><span>收藏 <b>18.2万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="林知远">查看档案</button></div>
+        </div>
+      </article>
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#33e1a6,#7ce0ff)">苏</div>
+        <div class="mx-author__body">
+          <h3>苏离 <b>原创</b></h3>
+          <div class="mx-field">擅长领域：实用技巧 · 生活记录</div>
+          <p>独立摄影师，主张低成本也能做出质感。她的作品大量使用自然光与实景收音，画面干净克制，评论区常被追问参数，她几乎每条都会回复。</p>
+          <div class="mx-author__nums"><span>作品 <b>64</b></span><span>粉丝 <b>16.8万</b></span><span>收藏 <b>12.6万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="苏离">查看档案</button></div>
+        </div>
+      </article>
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#8b7bff,#ff4d6d)">沈</div>
+        <div class="mx-author__body">
+          <h3>沈聿 <b>签约</b></h3>
+          <div class="mx-field">擅长领域：人物访谈 · 表演方法</div>
+          <p>戏剧学背景，长期研究表演中的情绪调度与边界沟通。她的镜头常常很近，但从不冒犯，擅长用对话推进叙事，被用户称为「最会提问的作者」。</p>
+          <div class="mx-author__nums"><span>作品 <b>52</b></span><span>粉丝 <b>14.2万</b></span><span>收藏 <b>9.8万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="沈聿">查看档案</button></div>
+        </div>
+      </article>
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#ffb36b,#ff4d6d)">许</div>
+        <div class="mx-author__body">
+          <h3>许恒 <b>原创</b></h3>
+          <div class="mx-field">擅长领域：城市探索 · 在地文化</div>
+          <p>纪录片方向的自由导演，喜欢把镜头交给街道与场所。他坚持每次拍摄前完成取景沟通，作品常以环境作为情绪的一部分，克制而耐看。</p>
+          <div class="mx-author__nums"><span>作品 <b>41</b></span><span>粉丝 <b>11.6万</b></span><span>收藏 <b>7.4万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="许恒">查看档案</button></div>
+        </div>
+      </article>
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#7ce0ff,#8b7bff)">顾</div>
+        <div class="mx-author__body">
+          <h3>顾晚 <b>新人</b></h3>
+          <div class="mx-field">擅长领域：日常记录 · 情感故事</div>
+          <p>2025 年通过新人推荐位被更多人看见，作品以生活化的场景与自然的对话为主。她坦言更新频率下降后反而更接近自己想拍的东西，这份诚实打动了很多用户。</p>
+          <div class="mx-author__nums"><span>作品 <b>27</b></span><span>粉丝 <b>8.9万</b></span><span>收藏 <b>5.1万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="顾晚">查看档案</button></div>
+        </div>
+      </article>
+      <article class="mx-author">
+        <div class="mx-avatar" style="background:linear-gradient(140deg,#ff4d6d,#8b7bff)">编</div>
+        <div class="mx-author__body">
+          <h3>幕光编辑部 <b>官方</b></h3>
+          <div class="mx-field">擅长领域：品牌故事 · 内容分级</div>
+          <p>平台官方内容团队，负责专题策划、访谈企划与行业观察。所有涉及规则解释与官方发布的内容均由该账号署名，信息可追溯、可核查。</p>
+          <div class="mx-author__nums"><span>作品 <b>118</b></span><span>粉丝 <b>31.5万</b></span><span>收藏 <b>22.4万</b></span></div>
+          <div class="mx-author__more"><button class="mx-act" type="button" data-author="幕光编辑部">查看档案</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S6 用户口碑（双列短评） ================= -->
+<section class="mx-sec" id="mxReviews">
+  <div class="mx-wrap">
+    <div class="mx-sectitle">
+      <div>
+        <span class="mx-kicker">REVIEWS</span>
+        <h2>成人x网用户口碑：来自社区的真实评价</h2>
+        <p>评价来自注册用户的公开评论，涵盖内容质量、创作体验、社区氛围与产品功能四个维度。</p>
+      </div>
+    </div>
+    <div class="mx-reviews">
+      <article class="mx-review">
+        <p>「最打动我的是那种克制。片子不长，也没有刻意的镜头，但看完会想很久。作为一个成立了十年的官方网站，能把情绪放在第一位，挺难得的。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#ff4d6d,#ffb36b)">陈</span><b>陈默</b><span>· 注册 3 年</span><span class="mx-stars">★★★★★</span></div>
+      </article>
+      <article class="mx-review">
+        <p>「我主要看教程类的内容。苏离那期低成本布光我反复看了三遍，参数写得很清楚，照着做确实能出片。创作者愿意把自己的经验完整分享出来，这点很少见。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#33e1a6,#7ce0ff)">周</span><b>周野</b><span>· 创作者</span><span class="mx-stars">★★★★★</span></div>
+      </article>
+      <article class="mx-review">
+        <p>「分级标签做得比较认真，至少我不用靠猜来判断内容强度。青少年模式也是默认开启的，这点给好评。不过希望搜索的关键词联想能再准一些。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#8b7bff,#ff4d6d)">李</span><b>李知夏</b><span>· 注册 1 年</span><span class="mx-stars">★★★★☆</span></div>
+      </article>
+      <article class="mx-review">
+        <p>「评论区整体比较理性，很少看到恶意引战。举报过一次违规封面，48 小时内就收到了处理结果，还附了说明。这种反馈闭环让人愿意继续留在这里。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#ffb36b,#ff4d6d)">吴</span><b>吴一鸣</b><span>· 注册 2 年</span><span class="mx-stars">★★★★★</span></div>
+      </article>
+      <article class="mx-review">
+        <p>「从观看者变成投稿者用了半年。新人推荐位那周播放量翻了四倍，但更重要的是收到了一些很认真的长评，指出了我收音上的问题。这种社区氛围挺珍贵。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#7ce0ff,#8b7bff)">郑</span><b>郑小满</b><span>· 创作者</span><span class="mx-stars">★★★★★</span></div>
+      </article>
+      <article class="mx-review">
+        <p>「高清播放和离线下载做得不错，通勤路上看访谈很流畅。唯一想吐槽的是专题的更新提醒有时候会延迟，希望消息推送能更及时一点。」</p>
+        <div class="mx-review__by"><span class="mx-avatar" style="background:linear-gradient(140deg,#ff4d6d,#8b7bff)">何</span><b>何雨</b><span>· 注册 4 年</span><span class="mx-stars">★★★★☆</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S7 辅助区：企业动态 + FAQ + 合作 ================= -->
+<section class="mx-sec mx-sec--alt" id="mxDynamic">
+  <div class="mx-wrap">
+    <div class="mx-cols">
+      <div>
+        <div class="mx-sectitle" style="margin-bottom:20px">
+          <div>
+            <span class="mx-kicker">NEWS</span>
+            <h2>企业动态与官方发布</h2>
+            <p>平台的产品更新、活动公告与运营记录，均可在此查阅。</p>
+          </div>
+        </div>
+        <div class="mx-dynlist">
+          <div class="mx-dyn">
+            <time datetime="2026-11-21">2026.11.21</time>
+            <div><h3>幕光映像官方 App 3.6.0 正式发布</h3><p>新增 4K 离线下载、创作者订阅提醒与夜间护眼模式，播放器首帧加载速度提升约 40%。</p></div>
+          </div>
+          <div class="mx-dyn">
+            <time datetime="2026-11-18">2026.11.18</time>
+            <div><h3>「真实·共情」第二季征集开启报名</h3><p>官方提供选题辅导与成片分级支持，投稿截止 12 月 20 日，优秀作品进入官网首页焦点位。</p></div>
+          </div>
+          <div class="mx-dyn">
+            <time datetime="2026-11-15">2026.11.15</time>
+            <div><h3>扶光计划第五期签约名单公布</h3><p>本期新增 12 位签约原创作者，覆盖访谈、纪实、技术与情感四个方向，享受制作与流量双重扶持。</p></div>
+          </div>
+          <div class="mx-dyn">
+            <time datetime="2026-11-10">2026.11.10</time>
+            <div><h3>内容分级与青少年模式完成升级</h3><p>分级标签扩展至四级，青少年模式默认开启，社区公约同步更新，创作者上传前需重新确认。</p></div>
+          </div>
+        </div>
+        <div class="mx-sectitle" style="margin:34px 0 18px">
+          <div>
+            <span class="mx-kicker">PARTNERS</span>
+            <h2>合作品牌与伙伴</h2>
+          </div>
+        </div>
+        <div class="mx-partners">
+          <div class="mx-partner">南枝影像<span>设备支持</span></div>
+          <div class="mx-partner">澄明后期<span>调色协作</span></div>
+          <div class="mx-partner">声场工作室<span>同期声方案</span></div>
+          <div class="mx-partner">合光学院<span>创作者培训</span></div>
+        </div>
+      </div>
+
+      <div id="mxFaq">
+        <div class="mx-sectitle" style="margin-bottom:20px">
+          <div>
+            <span class="mx-kicker">HELP</span>
+            <h2>帮助中心：关于成人x网常见问题</h2>
+            <p>以下问题来自用户与创作者的集中反馈，点击展开查看解答。</p>
+          </div>
+        </div>
+        <div class="mx-faq">
+          <details>
+            <summary>平台的内容分级是如何执行的？</summary>
+            <p>平台按年龄与内容强度设置四级标签，创作者上传时必须自行选择并填写说明，运营团队复核后才会进入官方发布通道。用户可在设置中调整可见范围，青少年模式默认开启过滤。</p>
+          </details>
+          <details>
+            <summary>我想成为创作者，需要满足什么条件？</summary>
+            <p>注册满 30 天且完成实名与合规培训即可申请。申请通过后需提交首个作品的创作说明与演员知情确认，审核通过即可上传。新人作品会进入为期七天的推荐位。</p>
+          </details>
+          <details>
+            <summary>投稿后多久能得到反馈？</summary>
+            <p>常规作品在 48 小时内完成初审，涉及分级说明补充的作品可能延长至 72 小时。未通过的作品会附具体原因，修改后可重新提交，不限制次数。</p>
+          </details>
+          <details>
+            <summary>如何举报不合规内容？</summary>
+            <p>每个作品页与评论区均提供反馈入口，提交后进入 7×24 小时响应通道，48 小时内给出处理结果。我们也欢迎通过官方邮箱提交说明与凭证。</p>
+          </details>
+          <details>
+            <summary>会员权益包含哪些内容？</summary>
+            <p>包括高清与 4K 播放、离线下载、专题提前看以及创作者独家幕后内容。所有权益均可按月或按年订阅，不自动续费，到期前会有提醒。</p>
+          </details>
+          <details>
+            <summary>作品版权归属如何界定？</summary>
+            <p>作品版权归创作者所有，平台获得展示与推广所需的授权。任何转载与合作需经创作者与平台双方确认，官方不会单方面处置作品。</p>
+          </details>
+          <details>
+            <summary>社区公约中最重要的是哪几条？</summary>
+            <p>尊重参与者意愿、不发布未经确认的内容、不制作误导性封面与标题、不诱导越界讨论。违反公约将按程度给予提醒、限流或下架处理。</p>
+          </details>
+        </div>
+
+        <div class="mx-cta" style="margin-top:26px">
+          <div>
+            <h2>把你的作品交给幕光映像</h2>
+            <p>无论是成片、脚本还是剪辑思路，都欢迎上传。官方团队会给出具体反馈，优秀作品有机会进入专题企划与首页焦点位。</p>
+          </div>
+          <div class="mx-hero__btns">
+            <button class="mx-btn mx-btn--primary" type="button" data-modal="mxModalSubmit">立即投稿</button>
+            <button class="mx-btn mx-btn--ghost" type="button" data-modal="mxModalContact">联系我们</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S8 页脚 ================= -->
+<footer class="mx-footer">
+  <div class="mx-wrap">
+    <div class="mx-footer__grid">
+      <div>
+        <div class="mx-logo" style="margin-bottom:14px">
+          <span class="mx-logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 2.6l9.2 5.4-9.2 5.4z" fill="#fff"/></svg>
+          </span>
+          <span>幕光映像<small>MUGUANG STUDIO</small></span>
+        </div>
+        <p>成人x网官方网站 · 幕光映像，专注原创高清成人影像内容的创作社区与内容平台，持续运营中。</p>
+        <p>我们坚持原创、正版与专业，以用户至上的原则构建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="#mxFocus">精品内容</a></li>
+          <li><a href="#mxTopics">专题企划</a></li>
+          <li><a href="#mxAuthors">创作者矩阵</a></li>
+          <li><a href="#mxReviews">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#mxAna">品牌故事</a></li>
+          <li><a href="#mxDynamic">企业动态</a></li>
+          <li><a href="#mxFaq">帮助中心</a></li>
+          <li><a href="#mxFaq">社区公约</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li><a href="#mxHero" data-modal="mxModalContact">商务合作</a></li>
+          <li><a href="#mxHero" data-modal="mxModalSubmit">创作者投稿</a></li>
+          <li><a href="#mxHero" data-modal="mxModalReport">内容举报</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mx-footer__bottom">
+      <span>© 2016–2026 幕光映像 版权所有 · 持续运营中</span>
+      <span>广播电视节目制作经营许可（示例）· 网络文化经营许可（示例）· 备案号：沪ICP备00000000号-1</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= 回到顶部 & Toast ================= -->
+<button class="mx-top" type="button" id="mxTopBtn" aria-label="回到顶部">↑</button>
+<div class="mx-toast" id="mxToast" role="status" aria-live="polite"></div>
+
+<!-- ================= 弹窗：投稿 ================= -->
+<div class="mx-modal" id="mxModalSubmit" role="dialog" aria-modal="true" aria-labelledby="mxModalSubmitTitle">
+  <div class="mx-modal__box">
+    <button class="mx-modal__close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="mxModalSubmitTitle">投稿入口 · 成人x网官方征稿</h3>
+    <p>请填写作品基本信息，官方编辑将在 48 小时内通过邮件反馈初审意见。提交前请确认作品已获得全部参与者知情同意。</p>
+    <label for="mxSubTitle">作品标题</label>
+    <input id="mxSubTitle" type="text" placeholder="例：凌晨四点的剪辑室">
+    <label for="mxSubAuthor">创作者署名</label>
+    <input id="mxSubAuthor" type="text" placeholder="请输入你的昵称">
+    <label for="mxSubDesc">作品简介与分级说明</label>
+    <textarea id="mxSubDesc" placeholder="简述创作动机、内容分级标签与拍摄说明"></textarea>
+    <div class="mx-modal__foot">
+      <button class="mx-btn mx-btn--ghost" type="button" data-close>取消</button>
+      <button class="mx-btn mx-btn--primary" type="button" data-submit>提交投稿</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 弹窗：联系 ================= -->
+<div class="mx-modal" id="mxModalContact" role="dialog" aria-modal="true" aria-labelledby="mxModalContactTitle">
+  <div class="mx-modal__box">
+    <button class="mx-modal__close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="mxModalContactTitle">联系我们</h3>
+    <p>商务合作、媒体采访与版权事务欢迎通过以下方式联系我们。</p>
+    <p style="margin-top:14px"><strong>商务合作：</strong>bd@muguang-studio.example</p>
+    <p><strong>媒体联络：</strong>press@muguang-studio.example</p>
+    <p><strong>版权与举报：</strong>legal@muguang-studio.example</p>
+    <p><strong>工作时间：</strong>周一至周五 10:00–19:00</p>
+    <div class="mx-modal__foot">
+      <button class="mx-btn mx-btn--primary" type="button" data-close>我知道了</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 弹窗：反馈 ================= -->
+<div class="mx-modal" id="mxModalReport" role="dialog" aria-modal="true" aria-labelledby="mxModalReportTitle">
+  <div class="mx-modal__box">
+    <button class="mx-modal__close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="mxModalReportTitle">内容反馈与举报</h3>
+    <p>请描述你遇到的问题，我们将在 48 小时内核查并反馈处理结果。</p>
+    <label for="mxRepType">问题类型</label>
+    <input id="mxRepType" type="text" placeholder="例：封面与内容不符">
+    <label for="mxRepDesc">详细说明</label>
+    <textarea id="mxRepDesc" placeholder="请描述具体位置与情况"></textarea>
+    <div class="mx-modal__foot">
+      <button class="mx-btn mx-btn--ghost" type="button" data-close>取消</button>
+      <button class="mx-btn mx-btn--primary" type="button" data-submit>提交反馈</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 弹窗：作者档案 ================= -->
+<div class="mx-modal" id="mxModalAuthor" role="dialog" aria-modal="true" aria-labelledby="mxModalAuthorTitle">
+  <div class="mx-modal__box">
+    <button class="mx-modal__close" type="button" data-close aria-label="关闭">×</button>
+    <h3 id="mxModalAuthorTitle">创作者档案</h3>
+    <p id="mxModalAuthorText">—</p>
+    <div class="mx-modal__foot">
+      <button class="mx-btn mx-btn--primary" type="button" data-close>关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById("mxBurger");
+  var mobileNav = document.getElementById("mxMobileNav");
+  if (burger && mobileNav) {
+    burger.addEventListener("click", function(){
+      var open = mobileNav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+    });
+    mobileNav.addEventListener("click", function(e){
+      if (e.target.tagName === "A") {
+        mobileNav.classList.remove("is-open");
+        burger.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById("mxToast");
+  var toastTimer = null;
+  function showToast(msg){
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-on"); }, 2200);
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener("click", function(e){
+    var likeBtn = e.target.closest("[data-like]");
+    if (likeBtn) {
+      var num = likeBtn.querySelector("[data-count]");
+      var on = likeBtn.classList.toggle("is-on");
+      likeBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      var heart = likeBtn.querySelector(".mx-heart");
+      if (heart) heart.textContent = on ? "♥" : "♡";
+      if (num) {
+        var v = parseInt(num.textContent, 10) || 0;
+        v = on ? v + 1 : Math.max(0, v - 1);
+        num.textContent = v;
+      }
+      showToast(on ? "已点赞，感谢支持" : "已取消点赞");
+      return;
+    }
+
+    var favBtn = e.target.closest("[data-fav]");
+    if (favBtn) {
+      var favOn = favBtn.classList.toggle("is-on");
+      favBtn.setAttribute("aria-pressed", favOn ? "true" : "false");
+      favBtn.textContent = favOn ? "★ 已收藏" : "☆ 收藏";
+      showToast(favOn ? "已加入收藏夹" : "已取消收藏");
+      return;
+    }
+
+    var copyBtn = e.target.closest("[data-copy]");
+    if (copyBtn) {
+      var link = "https://muguang.example/works";
+      function done(){ showToast("链接已复制，可分享给好友"); }
+      function fallback(){
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = link;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          done();
+        } catch(err){ showToast("复制失败，请手动分享"); }
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done).catch(fallback);
+      } else {
+        fallback();
+      }
+      return;
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var input = document.getElementById("mxSearchInput");
+  var searchBtn = document.getElementById("mxSearchBtn");
+  var echo = document.getElementById("mxSearchEcho");
+  var vlist = document.getElementById("mxVideoList");
+
+  function doSearch(){
+    if (!input || !echo || !vlist) return;
+    var q = (input.value || "").trim();
+    var items = vlist.querySelectorAll(".mx-vitem");
+    if (!q) {
+      items.forEach(function(it){ it.style.display = ""; });
+      echo.classList.remove("is-on");
+      echo.textContent = "";
+      return;
+    }
+    var hit = 0;
+    items.forEach(function(it){
+      var match = it.textContent.indexOf(q) > -1;
+      it.style.display = match ? "" : "none";
+      if (match) hit++;
+    });
+    echo.classList.add("is-on");
+    echo.textContent = hit > 0
+      ? "已为「" + q + "」筛选出 " + hit + " 条相关内容，其余条目已暂时收起。"
+      : "暂未找到与「" + q + "」直接匹配的视频条目，可尝试「访谈」「教程」「幕后」等关键词。";
+  }
+  if (searchBtn) searchBtn.addEventListener("click", doSearch);
+  if (input) {
+    input.addEventListener("keydown", function(e){
+      if (e.key === "Enter") { e.preventDefault(); doSearch(); }
+    });
+    input.addEventListener("input", function(){
+      if (!input.value.trim()) doSearch();
+    });
+  }
+
+  /* ---------- 弹窗 ---------- */
+  var modals = document.querySelectorAll(".mx-modal");
+  function openModal(id){
+    var m = document.getElementById(id);
+    if (!m) return;
+    m.classList.add("is-open");
+    var focusable = m.querySelector("input,textarea,button");
+    if (focusable) setTimeout(function(){ focusable.focus(); }, 40);
+  }
+  function closeModal(m){
+    if (m) m.classList.remove("is-open");
+  }
+  document.addEventListener("click", function(e){
+    var trigger = e.target.closest("[data-modal]");
+    if (trigger) {
+      e.preventDefault();
+      openModal(trigger.getAttribute("data-modal"));
+      return;
+    }
+    if (e.target.closest("[data-close]")) {
+      closeModal(e.target.closest(".mx-modal"));
+      return;
+    }
+    if (e.target.classList && e.target.classList.contains("mx-modal")) {
+      closeModal(e.target);
+    }
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") {
+      modals.forEach(function(m){ m.classList.remove("is-open"); });
+    }
+  });
+
+  /* ---------- 作者档案弹窗 ---------- */
+  var authorText = document.getElementById("mxModalAuthorText");
+  var authorTitle = document.getElementById("mxModalAuthorTitle");
+  var authorMap = {
+    "林知远": "林知远，影视后期出身，2018 年加入幕光映像。擅长创作幕后与教程干货方向，作品以稳健节奏与技术细节见长，累计作品 86 部，粉丝 23.4 万，是新人创作者最常参考的作者之一。",
+    "苏离": "苏离，独立摄影师，主张低成本也能做出质感。擅长实用技巧与生活记录，作品大量使用自然光与实景收音，累计作品 64 部，粉丝 16.8 万，评论区回复率接近九成。",
+    "沈聿": "沈聿，戏剧学背景，长期研究表演中的情绪调度与边界沟通。擅长人物访谈与表演方法，镜头很近但从不冒犯，被用户称为「最会提问的作者」，累计作品 52 部。",
+    "许恒": "许恒，纪录片方向的自由导演，擅长城市探索与在地文化。坚持每次拍摄前完成取景沟通，作品常以环境作为情绪的一部分，累计作品 41 部，粉丝 11.6 万。",
+    "顾晚": "顾晚，2025 年通过新人推荐位被更多人看见，擅长日常记录与情感故事。作品以生活化场景与自然对话为主，累计作品 27 部，粉丝 8.9 万，是新晋作者中的代表。",
+    "幕光编辑部": "幕光编辑部，平台官方内容团队，负责专题策划、访谈企划与行业观察。涉及规则解释与官方发布的内容均由该账号署名，信息可追溯、可核查，累计发布 118 部官方内容。"
+  };
+  document.addEventListener("click", function(e){
+    var btn = e.target.closest("[data-author]");
+    if (!btn) return;
+    var name = btn.getAttribute("data-author");
+    if (authorTitle) authorTitle.textContent = name + " · 创作者档案";
+    if (authorText) authorText.textContent = authorMap[name] || "该创作者暂无更多公开信息。";
+    openModal("mxModalAuthor");
+  });
+
+  /* ---------- 表单提交反馈 ---------- */
+  document.addEventListener("click", function(e){
+    var sub = e.target.closest("[data-submit]");
+    if (!sub) return;
+    closeModal(sub.closest(".mx-modal"));
+    showToast("已提交，官方编辑将在 48 小时内反馈");
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById("mxTopBtn");
+  function onScroll(){
+    if (!topBtn) return;
+    if (window.scrollY > 520) topBtn.classList.add("is-on");
+    else topBtn.classList.remove("is-on");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  if (topBtn) topBtn.addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  onScroll();
+})();
+</script>
+</body>
+  </html>
